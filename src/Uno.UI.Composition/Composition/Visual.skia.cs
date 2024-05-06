@@ -8,9 +8,9 @@ using Uno.Extensions;
 using Uno.UI.Composition;
 using Uno.UI.Composition.Composition;
 
-namespace Microsoft.UI.Composition;
+namespace Windows.UI.Composition;
 
-public partial class Visual : global::Microsoft.UI.Composition.CompositionObject
+public partial class Visual : global::Windows.UI.Composition.CompositionObject
 {
 	private CompositionClip? _clip;
 	private RectangleClip? _cornerRadiusClip;

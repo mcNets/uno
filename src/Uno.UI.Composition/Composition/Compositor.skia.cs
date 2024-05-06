@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using SkiaSharp;
 using Windows.ApplicationModel.Core;
 
-namespace Microsoft.UI.Composition;
+namespace Windows.UI.Composition;
 
 public partial class Compositor
 {

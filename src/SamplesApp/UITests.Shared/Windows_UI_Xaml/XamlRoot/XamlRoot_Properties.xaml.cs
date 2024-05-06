@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using Uno.UI.Samples.Controls;
 
 namespace UITests.Windows_UI_Xaml.XamlRoot;
@@ -32,7 +32,7 @@ public sealed partial class XamlRoot_Properties : UserControl
 
 	public ObservableCollection<string> ChangeLog { get; } = new();
 
-	private void XamlRoot_Changed(Microsoft.UI.Xaml.XamlRoot sender, XamlRootChangedEventArgs args) =>
+	private void XamlRoot_Changed(Windows.UI.Xaml.XamlRoot sender, XamlRootChangedEventArgs args) =>
 		UpdateProperties();
 
 	private void UpdateProperties()
