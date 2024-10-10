@@ -10,6 +10,7 @@ using Uno.Extensions.System;
 using Uno.Foundation.Extensibility;
 using Uno.Foundation.Logging;
 using Uno.Helpers;
+using Uno.UI.Helpers;
 using Uno.UI.Hosting;
 using Uno.UI.Runtime.Skia.Extensions.System;
 using Uno.UI.Xaml.Controls;
@@ -80,6 +81,8 @@ public partial class X11ApplicationHost : SkiaHost, ISkiaApplicationHost, IDispo
 		_eventLoop.Schedule(() => _isDispatcherThread = true, UI.Dispatching.NativeDispatcherPriority.Normal);
 		CoreDispatcher.DispatchOverride = _eventLoop.Schedule;
 		CoreDispatcher.HasThreadAccessOverride = () => _isDispatcherThread;
+
+		PlatformRuntimeHelper.SkiaPlatform = UnoRuntimePlatform.SkiaX11;
 	}
 
 	[LibraryImport("libc", StringMarshallingCustomType = typeof(AnsiStringMarshaller))]
